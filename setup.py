@@ -5,7 +5,7 @@ with open("README.md", "r", encoding="utf-8") as fh:
 
 setuptools.setup(
     name="SimplifyPython",
-    version="0.0.1",
+    version="0.0.2",
     author="Isaac",
     author_email="necrownyx@outlook.com",
     description="Simplifys aspects of python",
@@ -21,10 +21,7 @@ setuptools.setup(
         "Operating System :: OS Independent",
     ],
     install_requires=[
-        'discord',
-        'discord.utils',
-        'discord.ext',
-        'discord.ext.commands',
+        'json',
     ],
     package_dir={"": "src"},
     packages=setuptools.find_packages(where="src"),

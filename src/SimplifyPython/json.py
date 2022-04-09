@@ -1,6 +1,3 @@
-from .colors import colors
-
-
 class sjson:
     def open(filepath='data.json'):
         import json
