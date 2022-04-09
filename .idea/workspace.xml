@@ -2,20 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7e0bc628-6071-4c5d-ae7b-7c59e4a1037c" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/SimplifyPython/colors.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/SimplifyPython/json.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/data.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/SimplifyPython-0.0.1-py3-none-any.whl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/SimplifyPython-0.0.1.tar.gz" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/setup.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/SimplifyPython.egg-info/PKG-INFO" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/SimplifyPython.egg-info/SOURCES.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/SimplifyPython.egg-info/dependency_links.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/SimplifyPython.egg-info/requires.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/SimplifyPython.egg-info/top_level.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/SimplifyPython/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/SimplifyPython/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/SimplifyPython/json.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/SimplifyPython/json.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
