@@ -4,8 +4,8 @@ with open("README.md", "r", encoding="utf-8") as fh:
     long_description = fh.read()
 
 setuptools.setup(
-    name="PingServer",
-    version="0.0.32",
+    name="Simplify-Python",
+    version="0.0.1",
     author="Isaac",
     author_email="necrownyx@outlook.com",
     description="Makes creating a server to be pinged easier",
