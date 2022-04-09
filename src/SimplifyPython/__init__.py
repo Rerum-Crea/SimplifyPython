@@ -1,2 +1,2 @@
-def exist():
-    print('l')
+from .colors import colors
+from .json import sjson

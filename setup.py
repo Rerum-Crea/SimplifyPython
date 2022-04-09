@@ -8,12 +8,12 @@ setuptools.setup(
     version="0.0.1",
     author="Isaac",
     author_email="necrownyx@outlook.com",
-    description="Makes creating a server to be pinged easier",
+    description="Simplifys aspects of python",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url="https://github.com/Necrownyx/PingServer",
+    url="https://github.com/Necrownyx/SimplifyPython",
     project_urls={
-        "Bug Tracker": "https://github.com/Necrownyx/PingServer/issues",
+        "Bug Tracker": "https://github.com/Necrownyx/SimplifyPython/issues",
     },
     classifiers=[
         "Programming Language :: Python :: 3",
@@ -21,8 +21,10 @@ setuptools.setup(
         "Operating System :: OS Independent",
     ],
     install_requires=[
-        'flask',
-        'time',
+        'discord',
+        'discord.utils',
+        'discord.ext',
+        'discord.ext.commands',
     ],
     package_dir={"": "src"},
     packages=setuptools.find_packages(where="src"),
