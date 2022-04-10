@@ -45,8 +45,8 @@ class sjson:
                 f.close()
                 return True
             elif len(split) < 1:
-                from .colors import colors
-                print(f'{colors.FAIL}Filename must not be blank.')
+                from .print import sprint
+                sprint.red('Filename must not be blank.')
                 return False
             else:
                 f = open(filename, "w")
