@@ -5,7 +5,7 @@ with open("README.md", "r", encoding="utf-8") as fh:
 
 setuptools.setup(
     name="SimplifyPython",
-    version="0.0.3",
+    version="0.0.4",
     author="Isaac",
     author_email="necrownyx@outlook.com",
     description="Simplifys aspects of python",
@@ -20,9 +20,9 @@ setuptools.setup(
         "License :: OSI Approved :: MIT License",
         "Operating System :: OS Independent",
     ],
-    install_requires=[
-        'json',
-    ],
+    #install_requires=[
+        #'json',
+    #],
     package_dir={"": "src"},
     packages=setuptools.find_packages(where="src"),
     python_requires=">=3.6",
