@@ -27,7 +27,7 @@ class sjson:
                     json.dump(data, f)
             return True
         else:
-            from .colors import colors
+            from .print import sprint
             print(f'{colors.FAIL}No files found try creating one with sjson.new()')
 
     def new(filename='data.json'):

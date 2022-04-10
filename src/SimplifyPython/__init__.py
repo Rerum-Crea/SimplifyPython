@@ -1,2 +1,2 @@
-from .colors import colors
+from .print import sprint
 from .json import sjson
