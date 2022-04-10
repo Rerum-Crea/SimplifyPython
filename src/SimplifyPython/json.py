@@ -28,7 +28,7 @@ class sjson:
             return True
         else:
             from .print import sprint
-            print(f'{colors.FAIL}No files found try creating one with sjson.new()')
+            sprint.red('No files found try creating one with sjson.new()')
 
     def new(filename='data.json'):
         from os.path import exists
