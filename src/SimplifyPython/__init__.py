@@ -1,2 +1,2 @@
-from .print import sprint
 from .json import sjson
+from .print import sprint
