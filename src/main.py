@@ -3,5 +3,5 @@ from time import time
 from SimplifyPython import sprint
 
 var = 10
-sprint.blue(f"hello {var} is", "exist")
+sprint.blue(var)
 print(f"hello {var} is", "exist")

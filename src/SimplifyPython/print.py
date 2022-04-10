@@ -25,7 +25,7 @@ class sprint:
     def process(message):
         cmessage = ""
         for i in range(len(message)):
-            cmessage += message[i]
+            cmessage += str(message[i])
             cmessage += " "
         return cmessage
 
