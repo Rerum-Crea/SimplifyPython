@@ -41,7 +41,7 @@ class sjson:
         if len(presplit) == 1:
             filename += ".json"
         else:
-            filename = presplit
+            filename = filename
         if not exists(filename):
             split = filename.split(".")
             if len(split) == 1:

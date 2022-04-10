@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+src/SimplifyPython/__init__.py
+src/SimplifyPython/json.py
+src/SimplifyPython/print.py
+src/SimplifyPython.egg-info/PKG-INFO
+src/SimplifyPython.egg-info/SOURCES.txt
+src/SimplifyPython.egg-info/dependency_links.txt
+src/SimplifyPython.egg-info/top_level.txt
