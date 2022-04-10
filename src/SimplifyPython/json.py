@@ -1,4 +1,5 @@
 class sjson:
+
     def open(filepath="data.json"):
         import json
 
