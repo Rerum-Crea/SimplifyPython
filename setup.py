@@ -5,7 +5,7 @@ with open("README.md", "r", encoding="utf-8") as fh:
 
 setuptools.setup(
     name="SimplifyPython",
-    version="0.0.9",
+    version="0.0.12",
     author="Isaac",
     author_email="necrownyx@outlook.com",
     description="Simplifys aspects of python",
@@ -21,7 +21,7 @@ setuptools.setup(
         "Operating System :: OS Independent",
     ],
     install_requires=[
-        "PingServer",
+        "PingServer==1.0.1",
         "requests",
     ],
     package_dir={"": "src"},
