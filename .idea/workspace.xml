@@ -1,14 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7e0bc628-6071-4c5d-ae7b-7c59e4a1037c" name="Changes" comment="Bug fixes">
-      <change afterPath="$PROJECT_DIR$/src/SimplifyPython/flask.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/SimplifyPython/flask_internals.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/setup.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/SimplifyPython/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/SimplifyPython/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.py" afterDir="false" />
-    </list>
+    <list default="true" id="7e0bc628-6071-4c5d-ae7b-7c59e4a1037c" name="Changes" comment="Bug fixes" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
