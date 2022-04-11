@@ -1,4 +1,5 @@
 class spaste:
+
     def text(content, url="https://www.toptal.com/developers/hastebin"):
         link = internals(content, url)
         print(link)
