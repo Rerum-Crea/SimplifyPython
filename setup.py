@@ -21,7 +21,7 @@ setuptools.setup(
         "Operating System :: OS Independent",
     ],
     install_requires=[
-        "PingServer",
+        "PingServer==1.0.1",
         "requests",
     ],
     package_dir={"": "src"},
