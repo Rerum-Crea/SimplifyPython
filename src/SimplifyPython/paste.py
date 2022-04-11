@@ -1,5 +1,4 @@
 class spaste:
-
     def text(content, url="https://www.toptal.com/developers/hastebin"):
         link = write_internals(content, url)
         print(link)
@@ -16,7 +15,7 @@ class spaste:
         print(read_internals(purl))
         return read_internals(purl)
 
-    def save(url, filename='output.txt'):
+    def save(url, filename="output.txt"):
         purl = split(url)
         file = open(filename, "w")
         file.write(read_internals(purl))
@@ -34,6 +33,7 @@ def write_internals(content, url):
 
 def read_internals(url):
     from requests import get
+
     data = get(url)
     content = data.text
     return content
@@ -49,16 +49,19 @@ def stitch(filename):
 
 
 def split(url):
-    if '/raw/' in url:
+    if "/raw/" in url:
         return url
     else:
-        split = url.split('n/')
+        split = url.split("n/")
         try:
             url = f"{split[0]}n/raw/{split[1]}"
             return url
         except KeyError:
             from .print import sprint
-            sprint.red('KeyError occurred the url needs to be a hastebin url if it is try removing the slash at '
-                       'the end if this does not fix it please create an issue at '
-                       'https://github.com/Necrownyx/SimplifyPython')
+
+            sprint.red(
+                "KeyError occurred the url needs to be a hastebin url if it is try removing the slash at "
+                "the end if this does not fix it please create an issue at "
+                "https://github.com/Necrownyx/SimplifyPython"
+            )
             return False
