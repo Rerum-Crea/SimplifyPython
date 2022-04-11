@@ -130,10 +130,10 @@ To run the sites on the main thread.
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`spaste.text(string)`
 
-The message variable should be the content of the paste after you run it it will print the link to the terminal. A second argument of URL can be given if you would like to paste it on a different site *Likely wont work with some sites*
+The message variable should be the content of the paste after you run it it will print the link to the terminal. A second argument of URL can be given if you would like to paste it on a different site _Likely wont work with some sites_
 
 #### If you want to sent a files contents to hastebin.
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`spaste.file(filename)`
 
-Just define the filename of the desired file and let the package do the rest. A second argument of URL can be given if you would like to paste it on a different site *Likely wont work with some sites*
+Just define the filename of the desired file and let the package do the rest. A second argument of URL can be given if you would like to paste it on a different site _Likely wont work with some sites_
