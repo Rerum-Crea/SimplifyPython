@@ -1,4 +1,5 @@
 class sfile:
+
     def send(url, filepath, key):
         from .paste import spaste
 
@@ -13,7 +14,7 @@ class sfile:
         else:
             from threading import Thread
 
-            thread_data = Thread(target=receive_data_key, args=(key,))
+            thread_data = Thread(target=receive_data_key, args=(key, ))
             return thread_data
 
 
