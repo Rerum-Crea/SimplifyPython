@@ -1,12 +1,16 @@
 class spaste:
 
-    def text(content, url="https://www.toptal.com/developers/hastebin", doprint=True):
+    def text(content,
+             url="https://www.toptal.com/developers/hastebin",
+             doprint=True):
         link = write_internals(content, url)
         if doprint:
             print(link)
         return link
 
-    def file(filename, url="https://www.toptal.com/developers/hastebin", doprint=True):
+    def file(filename,
+             url="https://www.toptal.com/developers/hastebin",
+             doprint=True):
         data = stitch(filename)
         link = write_internals(data, url)
         if doprint:
