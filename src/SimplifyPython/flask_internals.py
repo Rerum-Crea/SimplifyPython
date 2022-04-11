@@ -102,8 +102,9 @@ def initialize(html):
 def launch_pages_internals(
     port, route_message_html, route_message, pageamt, htmlpageamt
 ):
-    from flask import Flask
     import random
+
+    from flask import Flask
 
     if port == 6969:
         port = random.randint(2000, 9000)
