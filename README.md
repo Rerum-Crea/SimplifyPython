@@ -17,6 +17,8 @@ This is a python package designed to reduce the need for code to be over-complex
 
 1. Json: Json is a package widely used for data storage.
 2. print: print is used to print to the terminal.
+3. Flask: Flask is a popular library for starting web servers.
+4. Paste: This module allows users to send data to a hastebin site.
 
 More coming soon.
 
@@ -76,7 +78,7 @@ This will print in the color of your choice.
 
 ## Flask
 
-Then import the sflask branch with:
+Import the sflask branch with:
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`from SimplifyPython import sflask`
 
@@ -117,3 +119,21 @@ To run all the sites on a thread or:
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`sflask.launch_pages_nothread()`
 
 To run the sites on the main thread.
+
+## Paste
+
+#### Import the spaste branch with:
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`from SimplifyPython import spaste`
+
+#### Then to send a string to hastebin type:
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`spaste.text(string)`
+
+The message variable should be the content of the paste after you run it it will print the link to the terminal. A second argument of URL can be given if you would like to paste it on a different site _Likely wont work with some sites_
+
+#### If you want to sent a files contents to hastebin.
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`spaste.file(filename)`
+
+Just define the filename of the desired file and let the package do the rest. A second argument of URL can be given if you would like to paste it on a different site _Likely wont work with some sites_
