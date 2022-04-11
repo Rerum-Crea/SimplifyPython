@@ -35,6 +35,7 @@ def send_data_key(url, filename, pasteurl, key):
 
 def receive_data():
     import flask
+
     from .paste import spaste
 
     app = flask.Flask(__name__)
@@ -51,6 +52,7 @@ def receive_data():
 
 def receive_data_key(key):
     import flask
+
     from .paste import spaste
 
     app = flask.Flask(__name__)
