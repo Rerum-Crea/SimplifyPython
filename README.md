@@ -1,3 +1,4 @@
+
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[![GitHub issues](https://img.shields.io/github/issues/Necrownyx/SimplifyPython)](https://github.com/Necrownyx/SimplifyPython/issues) [![GitHub forks](https://img.shields.io/github/forks/Necrownyx/SimplifyPython)](https://github.com/Necrownyx/SimplifyPython/network) [![GitHub stars](https://img.shields.io/github/stars/Necrownyx/SimplifyPython)](https://github.com/Necrownyx/SimplifyPython/stargazers) [![GitHub license](https://img.shields.io/github/license/Necrownyx/SimplifyPython)](https://github.com/Necrownyx/SimplifyPython/blob/main/LICENSE) [![Python](https://img.shields.io/badge/Made%20with-Python-%2300AEFF)](https://python.org) [![Python](https://img.shields.io/badge/Available%20on-PyPi-%2300AEFF)](https://pypi.org/project/SimplifyPython/) [![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2FNecrownyx%2FSimplifyPython&count_bg=%2300AEFF&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=false)](https://hits.seeyoufarm.com)
 
 <pre align="center">
@@ -147,3 +148,22 @@ Or
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`spaste.save(url, filepath)`
 
 These are mostly straightforward URL is the Hastebin URL and for the save function filepath is the path of the file to save the data to.
+
+## File
+
+#### Import the sfile branch with:
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`from SimplifyPython import sfile`
+
+#### Then to receive files type:
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`sfile.receive.start()`
+
+This will start a flask server to send the request to. you can use an optional key parameter to specify a key needed in the request for the transfer to be accepted.
+
+#### Then to send files type:
+
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`sfile.send(url, filepath, key)`
+
+For the parameters url is the url of the server setup above, filepath is the path to the file to be transferred, and key is the key for the transfer only use this parameter if a key has been setup above.
+*Warning: none of the files are encrypted so if you want them to be you will have to encrypt them yourself the files however are not shown on any search pages or such.* 
