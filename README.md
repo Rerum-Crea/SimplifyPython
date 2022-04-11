@@ -1,3 +1,4 @@
+
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[![GitHub issues](https://img.shields.io/github/issues/Necrownyx/SimplifyPython)](https://github.com/Necrownyx/SimplifyPython/issues) [![GitHub forks](https://img.shields.io/github/forks/Necrownyx/SimplifyPython)](https://github.com/Necrownyx/SimplifyPython/network) [![GitHub stars](https://img.shields.io/github/stars/Necrownyx/SimplifyPython)](https://github.com/Necrownyx/SimplifyPython/stargazers) [![GitHub license](https://img.shields.io/github/license/Necrownyx/SimplifyPython)](https://github.com/Necrownyx/SimplifyPython/blob/main/LICENSE) [![Python](https://img.shields.io/badge/Made%20with-Python-%2300AEFF)](https://python.org) [![Python](https://img.shields.io/badge/Available%20on-PyPi-%2300AEFF)](https://pypi.org/project/SimplifyPython/) [![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2FNecrownyx%2FSimplifyPython&count_bg=%2300AEFF&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=false)](https://hits.seeyoufarm.com)
 
 <pre align="center">
@@ -132,8 +133,23 @@ To run the sites on the main thread.
 
 The message variable should be the content of the paste after you run it it will print the link to the terminal. A second argument of URL can be given if you would like to paste it on a different site _Likely wont work with some sites_
 
+Just define the filename of the desired file and let the package do the rest. A second argument of URL can be given if you would like to paste it on a different site _Likely wont work with some sites
+
 #### If you want to sent a files contents to hastebin.
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`spaste.file(filename)`
 
-Just define the filename of the desired file and let the package do the rest. A second argument of URL can be given if you would like to paste it on a different site _Likely wont work with some sites_
+#### To read hastebin files use.
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`spaste.read(url)`
+
+Or
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`spaste.save(url, filepath)`
+
+These are mostly straightforward URL is the Hastebin URL and for the save function filepath is the path of the file to save the data to.
+
+
+
+
+
