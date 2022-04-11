@@ -1,7 +1,8 @@
 from time import time
 
-from SimplifyPython import sprint
+from SimplifyPython import sflask
 
 var = 10
-sprint.blue(var)
-print(f"hello {var} is", "exist")
+sflask.create_page('/', 'hello, world!')
+sflask.create_page('/no', 'goodbye')
+sflask.launch_pages().start()
