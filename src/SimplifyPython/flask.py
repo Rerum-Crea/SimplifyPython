@@ -1,2 +1,3 @@
 class sflask:
-    from PingServer import create_page, help, launch_pages, launch_pages_nothread, start, thread
+    from PingServer import (bcolors, create_page, help, launch_pages_nothread,
+                            start, thread)

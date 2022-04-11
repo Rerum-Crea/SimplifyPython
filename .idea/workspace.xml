@@ -1,11 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
+<<<<<<< HEAD
+    <list default="true" id="7e0bc628-6071-4c5d-ae7b-7c59e4a1037c" name="Changes" comment="fix bug in spaste">
+      <change beforePath="$PROJECT_DIR$/src/SimplifyPython/flask.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/SimplifyPython/flask.py" afterDir="false" />
+=======
     <list default="true" id="7e0bc628-6071-4c5d-ae7b-7c59e4a1037c" name="Changes" comment="Added simple read to spaste">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/SimplifyPython/paste.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/SimplifyPython/paste.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/data.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/data.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.py" afterDir="false" />
+>>>>>>> main
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

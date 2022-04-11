@@ -147,3 +147,22 @@ Or
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`spaste.save(url, filepath)`
 
 These are mostly straightforward URL is the Hastebin URL and for the save function filepath is the path of the file to save the data to.
+
+## File
+
+#### Import the sfile branch with:
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`from SimplifyPython import sfile`
+
+#### Then to receive files type:
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`sfile.receive.start()`
+
+This will start a flask server to send the request to. you can use an optional key parameter to specify a key needed in the request for the transfer to be accepted.
+
+#### Then to send files type:
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`sfile.send(url, filepath, key)`
+
+For the parameters url is the url of the server setup above, filepath is the path to the file to be transferred, and key is the key for the transfer only use this parameter if a key has been setup above.
+_Warning: none of the files are encrypted so if you want them to be you will have to encrypt them yourself the files however are not shown on any search pages or such._

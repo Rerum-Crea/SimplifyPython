@@ -1,7 +1,5 @@
-from time import time
+from time import sleep
 
-from SimplifyPython import spaste
+from SimplifyPython import sfile
 
-spaste.save("https://www.toptal.com/developers/hastebin/zisumaxeta.properties",
-            "data.json")
-spaste.read("https://www.toptal.com/developers/hastebin/zisumaxeta.properties")
+sfile.receive("key123").start()
