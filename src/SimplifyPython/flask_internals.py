@@ -64,9 +64,8 @@ def launch_pages(port=6969, daemon=False):
 
 
 def launch_pages_nothread(port=6969):
-    launch_pages_internals(
-        port, route_message_html, route_message, pagenum, htmlpagenum
-    )
+    launch_pages_internals(port, route_message_html, route_message, pagenum,
+                           htmlpagenum)
 
 
 def initialize(html):
@@ -86,11 +85,12 @@ def initialize(html):
             route_message_html[i] = {}
             route_message[i] = {}
             route_message_html[i][
-                "route"
-            ] = "/PingServerIsTheBestForThingsLikeLongURLSJK"
-            route_message[i]["route"] = "/PingServerIsTheBestForThingsLikeLongURLSJK"
+                "route"] = "/PingServerIsTheBestForThingsLikeLongURLSJK"
+            route_message[i][
+                "route"] = "/PingServerIsTheBestForThingsLikeLongURLSJK"
             route_message_html[i]["message"] = ":("
-            route_message[i]["html-path"] = "If you use the default for html your bad"
+            route_message[i][
+                "html-path"] = "If you use the default for html your bad"
         done = True
     if done is True:
         if html is True:
@@ -99,9 +99,8 @@ def initialize(html):
             return pagenum
 
 
-def launch_pages_internals(
-    port, route_message_html, route_message, pageamt, htmlpageamt
-):
+def launch_pages_internals(port, route_message_html, route_message, pageamt,
+                           htmlpageamt):
     import random
 
     from flask import Flask
@@ -206,12 +205,14 @@ def launch_pages_internals(
 
 
 def string_1(app, route_message):
+
     @app.route(route_message[0]["route"])
     def Server_0():
         return route_message[0]["message"]
 
 
 def string_10(app, route_message):
+
     @app.route(route_message[1]["route"])
     def Server_1():
         return route_message[1]["message"]
@@ -250,6 +251,7 @@ def string_10(app, route_message):
 
 
 def string_20(app, route_message):
+
     @app.route(route_message[10]["route"])
     def Server_10():
         return route_message[10]["message"]
@@ -292,6 +294,7 @@ def string_20(app, route_message):
 
 
 def string_30(app, route_message):
+
     @app.route(route_message[20]["route"])
     def Server_20():
         return route_message[20]["message"]
@@ -334,6 +337,7 @@ def string_30(app, route_message):
 
 
 def string_40(app, route_message):
+
     @app.route(route_message[30]["route"])
     def Server_30():
         return route_message[30]["message"]
@@ -376,6 +380,7 @@ def string_40(app, route_message):
 
 
 def string_50(app, route_message):
+
     @app.route(route_message[40]["route"])
     def Server_40():
         return route_message[40]["message"]
