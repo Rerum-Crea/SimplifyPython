@@ -31,6 +31,7 @@ def write_internals(content, url):
     link = f'{url}/{poster.json()["key"]}'
     return link
 
+
 def read_internals(url):
     from requests import get
     data = get(url)
@@ -45,6 +46,7 @@ def stitch(filename):
     for i in range(len(lines)):
         data += lines[i]
     return data
+
 
 def split(url):
     if '/raw/' in url:
