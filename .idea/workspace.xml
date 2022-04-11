@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7e0bc628-6071-4c5d-ae7b-7c59e4a1037c" name="Changes" comment="fix bug in spaste">
+    <list default="true" id="7e0bc628-6071-4c5d-ae7b-7c59e4a1037c" name="Changes" comment="Added simple read to spaste">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/SimplifyPython/paste.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/SimplifyPython/paste.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/data.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/data.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -91,7 +94,14 @@
       <option name="project" value="LOCAL" />
       <updated>1649656659219</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Added simple read to spaste">
+      <created>1649657761799</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1649657761799</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -110,6 +120,7 @@
     <MESSAGE value="Bug fixes" />
     <MESSAGE value="Added stich function" />
     <MESSAGE value="fix bug in spaste" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix bug in spaste" />
+    <MESSAGE value="Added simple read to spaste" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added simple read to spaste" />
   </component>
 </project>
