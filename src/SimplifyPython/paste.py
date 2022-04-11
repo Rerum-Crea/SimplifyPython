@@ -5,12 +5,7 @@ class spaste:
         return link
 
     def file(filename, url='https://www.toptal.com/developers/hastebin'):
-        from requests import post
-        with open(filename) as f:
-            lines = f.readlines()
-        data = ""
-        for i in range(len(lines)):
-            data += lines[i]
+        data = stitch(filename)
         internals(data, url)
 
 
@@ -19,3 +14,12 @@ def internals(content, url):
     poster = post(f'{url}/documents', data=content.encode('utf-8'))
     link = f'{url}/{poster.json()["key"]}'
     return link
+
+
+def stitch(filename):
+    with open(filename) as f:
+        lines = f.readlines()
+    data = ""
+    for i in range(len(lines)):
+        data += lines[i]
+    return data
