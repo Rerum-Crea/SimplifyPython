@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7e0bc628-6071-4c5d-ae7b-7c59e4a1037c" name="Changes" comment="fix bug in spaste" />
+    <list default="true" id="7e0bc628-6071-4c5d-ae7b-7c59e4a1037c" name="Changes" comment="fix bug in spaste">
+      <change beforePath="$PROJECT_DIR$/src/SimplifyPython/flask.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/SimplifyPython/flask.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
