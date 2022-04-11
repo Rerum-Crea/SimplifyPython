@@ -1,8 +1,5 @@
 from time import time
 
-from SimplifyPython import sflask
+from SimplifyPython import spaste
 
-var = 10
-sflask.create_page("/", "hello, world!")
-sflask.create_page("/no", "goodbye")
-sflask.launch_pages().start()
+spaste.file('data.json')
