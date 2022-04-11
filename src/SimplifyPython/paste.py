@@ -6,7 +6,9 @@ class spaste:
 
     def file(filename, url='https://www.toptal.com/developers/hastebin'):
         data = stitch(filename)
-        internals(data, url)
+        link = internals(data, url)
+        print(link)
+        return link
 
 
 def internals(content, url):
