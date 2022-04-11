@@ -1,5 +1,4 @@
 class spaste:
-
     def text(content, url="https://www.toptal.com/developers/hastebin", doprint=True):
         link = write_internals(content, url)
         if doprint:
@@ -65,5 +64,6 @@ def split(url):
             sprint.red(
                 "KeyError occurred the url needs to be a hastebin url if it is try removing the slash at "
                 "the end if this does not fix it please create an issue at "
-                "https://github.com/Necrownyx/SimplifyPython")
+                "https://github.com/Necrownyx/SimplifyPython"
+            )
             return False
