@@ -52,9 +52,10 @@ class scrypto:
 
         split = filepath.split(".")
         split.remove(split[-1])
-        output_file = ""
+        output_file = split[0]
         for i in range(len(split)):
-            output_file += f"{split[i]}."
+            if i != 0:
+                output_file += f".{split[i]}"
         with open(filepath, "rb") as f:
             data = f.read()
         fernet = Fernet(key)
