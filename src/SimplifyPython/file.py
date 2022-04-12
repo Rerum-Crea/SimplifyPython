@@ -4,11 +4,12 @@ class sfile:
             from .paste import spaste
 
             new_filepath = create_temp(filepath)
-            send_data(url, filepath.split("\\")[-1], spaste.file(new_filepath))
+            send_data(url, new_filepath.split("\\")[-1], spaste.file(new_filepath)) # .tpm given
         else:
             from .paste import spaste
+            from .crypto import scrypto
 
-            new_filepath = create_temp(filepath)
+            new_filepath = scrypto.encrypt_file(scrypto.generate_key('', b''), filepath)
             send_data_key(url,
                           filepath.split("\\")[-1], spaste.file(new_filepath), key)
 
