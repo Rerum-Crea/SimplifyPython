@@ -23,6 +23,7 @@ setuptools.setup(
     install_requires=[
         "PingServer==1.0.1",
         "requests",
+        "cryptography",
     ],
     package_dir={"": "src"},
     packages=setuptools.find_packages(where="src"),
