@@ -8,14 +8,16 @@ class sfile:
         else:
             from .paste import spaste
 
-            send_data_key(url, filepath.split("\\")[-1], spaste.file(filepath), key)
+            send_data_key(url, filepath.split(
+                "\\")[-1], spaste.file(filepath), key)
 
     def send_encrypted(url, filepath, key):
         from .crypto import scrypto
         from .paste import spaste
 
         new_filepath = scrypto.encrypt_file(key, filepath)
-        send_data_key(url, new_filepath.split("\\")[-1], spaste.file(new_filepath), key)
+        send_data_key(url, new_filepath.split(
+            "\\")[-1], spaste.file(new_filepath), key)
 
     def receive(key):
         if key is None:
