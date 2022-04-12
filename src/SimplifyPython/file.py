@@ -90,8 +90,10 @@ def receive_data_key(key):
 
 
 def receive_data_encrypted(key):
-    import flask
     import os
+
+    import flask
+
     from .crypto import scrypto
     from .paste import spaste
 
