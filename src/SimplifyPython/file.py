@@ -1,4 +1,5 @@
 class sfile:
+
     def send(url, filepath, key):
         if key is None:
             from .paste import spaste
@@ -7,14 +8,17 @@ class sfile:
         else:
             from .paste import spaste
 
-            send_data_key(url, filepath.split("\\")[-1], spaste.file(filepath), key)
+            send_data_key(url,
+                          filepath.split("\\")[-1], spaste.file(filepath), key)
 
     def send_encrypted(url, filepath, key):
         from .crypto import scrypto
         from .paste import spaste
 
         new_filepath = scrypto.encrypt_file(key, filepath)
-        send_data_key(url, new_filepath.split("\\")[-1], spaste.file(new_filepath), key)
+        send_data_key(url,
+                      new_filepath.split("\\")[-1], spaste.file(new_filepath),
+                      key)
 
     def receive(key):
         if key is None:
@@ -25,13 +29,13 @@ class sfile:
         else:
             from threading import Thread
 
-            thread_data = Thread(target=receive_data_key, args=(key,))
+            thread_data = Thread(target=receive_data_key, args=(key, ))
             return thread_data
 
     def receive_encrypted(key):
         from threading import Thread
 
-        thread_data = Thread(target=receive_data_encrypted, args=(key,))
+        thread_data = Thread(target=receive_data_encrypted, args=(key, ))
         return thread_data
 
 
