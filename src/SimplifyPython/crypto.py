@@ -36,8 +36,10 @@ class scrypto:
             data = f.read()
         fernet = Fernet(key)
         encrypted = fernet.encrypt(data)
-        with open(f"{filepath}.encrypted", 'wb') as f:
+        outfile = f"{filepath}.encrypted"
+        with open(outfile, 'wb') as f:
             f.write(encrypted)
+        return outfile
 
     def decrypt_file(key, filepath):
         from cryptography.fernet import Fernet, InvalidToken
@@ -53,5 +55,6 @@ class scrypto:
             decrypted = fernet.decrypt(data)
             with open(output_file, 'wb') as f:
                 f.write(decrypted)
+            return output_file
         except InvalidToken as e:
             print("Invalid Key - Unsuccessfully decrypted")
