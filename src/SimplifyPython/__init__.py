@@ -1,3 +1,4 @@
+from .crypto import scrypto
 from .file import sfile
 from .flask import sflask
 from .json import sjson

@@ -1,9 +1,24 @@
 class sfile:
 
     def send(url, filepath, key):
+        if key is None:
+            from .paste import spaste
+
+            send_data(url, filepath.split("\\")[-1], spaste.file(filepath))
+        else:
+            from .paste import spaste
+
+            send_data_key(url,
+                          filepath.split("\\")[-1], spaste.file(filepath), key)
+
+    def send_encrypted(url, filepath, key):
+        from .crypto import scrypto
         from .paste import spaste
 
-        send_data(url, filepath.split("\\")[-1], spaste.file(filepath))
+        new_filepath = scrypto.encrypt_file(key, filepath)
+        send_data_key(url,
+                      new_filepath.split("\\")[-1], spaste.file(new_filepath),
+                      key)
 
     def receive(key):
         if key is None:
@@ -16,6 +31,12 @@ class sfile:
 
             thread_data = Thread(target=receive_data_key, args=(key, ))
             return thread_data
+
+    def receive_encrypted(key):
+        from threading import Thread
+
+        thread_data = Thread(target=receive_data_encrypted, args=(key, ))
+        return thread_data
 
 
 def send_data(url, filename, pasteurl):
@@ -70,3 +91,35 @@ def receive_data_key(key):
             return "Key incorrect"
 
     app.run(host="0.0.0.0")
+
+
+def receive_data_encrypted(key):
+    import os
+
+    import flask
+
+    from .crypto import scrypto
+    from .paste import spaste
+
+    app = flask.Flask(__name__)
+
+    @app.route("/", methods=["POST"])
+    def server():
+        url = flask.request.form["url"]
+        filepath = flask.request.form["filename"]
+        sentkey = flask.request.form["key"]
+        spaste.save(url, filepath)
+        scrypto.decrypt_file(key, filepath)
+        os.remove(filepath)
+        return "Request Complete"
+
+    app.run(host="0.0.0.0")
+
+
+def stitch(filename):
+    with open(filename) as f:
+        lines = f.readlines()
+    data = ""
+    for i in range(len(lines)):
+        data += lines[i]
+    return data
