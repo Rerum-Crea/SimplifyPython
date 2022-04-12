@@ -33,7 +33,7 @@ class spaste:
 def write_internals(content, url):
     from requests import post
 
-    poster = post(f"{url}/documents", data=content.encode("utf-8"))
+    poster = post(f"{url}/documents", data=content.decode())
     link = f'{url}/{poster.json()["key"]}'
     return link
 
@@ -47,11 +47,11 @@ def read_internals(url):
 
 
 def stitch(filename):
-    with open(filename) as f:
-        lines = f.readlines()
-    data = ""
-    for i in range(len(lines)):
-        data += lines[i]
+    with open(filename, 'rb') as f:
+        data = f.read()
+    #data = ""
+    #for i in range(len(lines)):
+        #data += str(lines[i])
     return data
 
 

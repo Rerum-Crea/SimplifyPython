@@ -1,6 +1,6 @@
 class sfile:
 
-    def send(url, filepath, key):
+    def send(url, filepath, key=None):
         if key is None:
             from .paste import spaste
 
@@ -16,11 +16,10 @@ class sfile:
         from .paste import spaste
 
         new_filepath = scrypto.encrypt_file(key, filepath)
-        send_data_key(url,
-                      new_filepath.split("\\")[-1], spaste.file(new_filepath),
-                      key)
+        send_data(url,
+                      new_filepath.split("\\")[-1], spaste.file(new_filepath))
 
-    def receive(key):
+    def receive(key=None):
         if key is None:
             from threading import Thread
 
@@ -107,7 +106,6 @@ def receive_data_encrypted(key):
     def server():
         url = flask.request.form["url"]
         filepath = flask.request.form["filename"]
-        sentkey = flask.request.form["key"]
         spaste.save(url, filepath)
         scrypto.decrypt_file(key, filepath)
         os.remove(filepath)

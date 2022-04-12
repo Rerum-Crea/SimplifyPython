@@ -1,15 +1,11 @@
-from time import sleep
+from fileinput import filename
+import requests
+import easygui
+from SimplifyPython import sfile, spaste
 
-from SimplifyPython import scrypto
+def main():
+    filepath = easygui.fileopenbox()
+    # sfile.send_encrypted('https://Messin.necrownyx.repl.co', filepath, b'qUVKJy_nN8H8TUSkhbC2X7WjfX7jm51BhD_KbjUwkZw=')
+    sfile.send('https://Messin.necrownyx.repl.co', filepath, '123')
 
-key = scrypto.generate_key("password", b"12345")
-
-encrypted_message = scrypto.encrypt(key, "hello, world")
-
-print(encrypted_message)
-
-decrypted_message = scrypto.decrypt(key, encrypted_message)
-
-print(decrypted_message)
-
-scrypto.decrypt_file(key, "data.json.encrypted")
+main()
