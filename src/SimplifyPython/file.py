@@ -1,15 +1,16 @@
 class sfile:
-
     def send(url, filepath, key=None):
         if key is None:
             from .paste import spaste
 
-            send_data(url, filepath.split("\\")[-1], spaste.file(filepath))
+            new_filepath = create_temp(filepath)
+            send_data(url, filepath.split("\\")[-1], spaste.file(new_filepath))
         else:
             from .paste import spaste
 
+            new_filepath = create_temp(filepath)
             send_data_key(url,
-                          filepath.split("\\")[-1], spaste.file(filepath), key)
+                          filepath.split("\\")[-1], spaste.file(new_filepath), key)
 
     def send_encrypted(url, filepath, key):
         from .crypto import scrypto
@@ -56,8 +57,9 @@ def send_data_key(url, filename, pasteurl, key):
 
 def receive_data():
     import flask
-
+    import os
     from .paste import spaste
+    from .crypto import scrypto
 
     app = flask.Flask(__name__)
 
@@ -66,6 +68,8 @@ def receive_data():
         url = flask.request.form["url"]
         filepath = flask.request.form["filename"]
         spaste.save(url, filepath)
+        scrypto.decrypt_file(b'ZKho1LI69pbTc00LgU0EzdGsKAEo6XZToF8ytJwTopo=', filepath)
+        os.remove(filepath)
         return "Request Complete"
 
     app.run(host="0.0.0.0")
@@ -73,8 +77,9 @@ def receive_data():
 
 def receive_data_key(key):
     import flask
-
+    import os
     from .paste import spaste
+    from .crypto import scrypto
 
     app = flask.Flask(__name__)
 
@@ -85,6 +90,8 @@ def receive_data_key(key):
         sentkey = flask.request.form["key"]
         if sentkey == key:
             spaste.save(url, filepath)
+            scrypto.decrypt_file(b'ZKho1LI69pbTc00LgU0EzdGsKAEo6XZToF8ytJwTopo=', filepath)
+            os.remove(filepath)
             return "Request Complete"
         else:
             return "Key incorrect"
@@ -121,3 +128,16 @@ def stitch(filename):
     for i in range(len(lines)):
         data += lines[i]
     return data
+
+def create_temp(filepath):
+    from cryptography.fernet import Fernet
+    from .crypto import scrypto
+    with open(filepath, "rb") as f:
+        data = f.read()
+    outfile = f"{filepath}.tmp"
+    key = scrypto.generate_key('', b'')
+    fernet = Fernet(key)
+    encrypted = fernet.encrypt(data)
+    with open(outfile, "wb") as f:
+        f.write(encrypted)
+    return outfile

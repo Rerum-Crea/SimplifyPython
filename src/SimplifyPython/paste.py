@@ -12,6 +12,7 @@ class spaste:
              url="https://www.toptal.com/developers/hastebin",
              doprint=True):
         data = stitch(filename)
+
         link = write_internals(data, url)
         if doprint:
             print(link)
@@ -33,7 +34,7 @@ class spaste:
 def write_internals(content, url):
     from requests import post
 
-    poster = post(f"{url}/documents", data=content.decode())
+    poster = post(f"{url}/documents", data=content)
     link = f'{url}/{poster.json()["key"]}'
     return link
 
