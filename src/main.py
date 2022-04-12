@@ -13,4 +13,3 @@ decrypted_message = scrypto.decrypt(key, encrypted_message)
 print(decrypted_message)
 
 scrypto.decrypt_file(key, 'data.json.encrypted')
-

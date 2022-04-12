@@ -14,7 +14,8 @@ class scrypto:
             iterations=100000,
             backend=default_backend()
         )
-        key = base64.urlsafe_b64encode(kdf.derive(password))  # Can only use kdf once
+        key = base64.urlsafe_b64encode(
+            kdf.derive(password))  # Can only use kdf once
         return key
 
     def encrypt(key, input):
