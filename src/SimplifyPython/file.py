@@ -21,22 +21,22 @@ class sfile:
         send_data(url,
                       new_filepath.split("\\")[-1], spaste.file(new_filepath))
 
-    def receive(key=None):
+    def receive(key=None, daemon=False):
         if key is None:
             from threading import Thread
 
-            thread_data = Thread(target=receive_data)
+            thread_data = Thread(target=receive_data, daemon=daemon)
             return thread_data
         else:
             from threading import Thread
 
-            thread_data = Thread(target=receive_data_key, args=(key, ))
+            thread_data = Thread(target=receive_data_key, args=(key, ), daemon=daemon)
             return thread_data
 
-    def receive_encrypted(key):
+    def receive_encrypted(key, daemon=False):
         from threading import Thread
 
-        thread_data = Thread(target=receive_data_encrypted, args=(key, ))
+        thread_data = Thread(target=receive_data_encrypted, args=(key, ), daemon=daemon)
         return thread_data
 
 
