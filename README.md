@@ -151,6 +151,8 @@ These are mostly straightforward URL is the Hastebin URL and for the save functi
 
 ## File
 
+A simple implementation of this in a semi useful fashion can be found at https://github.com/Necrownyx/FileSend
+
 #### Import the sfile branch with:
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`from SimplifyPython import sfile`
